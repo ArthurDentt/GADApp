@@ -88,17 +88,22 @@ func dateGen() -> (String,Int) {
 
 let initialdate = dateGen()
 
+
 struct CalendarImage: View {
     @State var date = initialdate.0
     @State var calcolor = Color("calColor")
-    @State var responseNum = -1
     @State var dateNum = initialdate.1
-
+    @State var numCorrect = 0
+    @State var numTries = 0
+    @State var accuracy = 0.0
+    
     var body: some View {
+        
         ZStack{
             Color("bkgdColor")
                 .ignoresSafeArea()
             
+            VStack{
             VStack {
                 Text("Give Me A Date!")
                     .font(.title)
@@ -139,8 +144,12 @@ struct CalendarImage: View {
                 VStack {
                     HStack{
                         Button(action: {
-                            self.responseNum = 0
-                            //MAKE A CHECK FOR CORRECTNESS AND THEN A RESET OF RESPONSENUM TO -1
+                            self.numTries += 1
+                            if (0 == dateNum){
+                                numCorrect += 1
+                                (self.date,self.dateNum) = dateGen()
+                            }
+                            self.accuracy = Double(numCorrect)/Double(numTries)
                         }){
                             Text(" 0 ")
                                 .fontWeight(.bold)
@@ -152,7 +161,12 @@ struct CalendarImage: View {
                         .foregroundColor(.black)
                         
                         Button(action: {
-                            self.responseNum = 1
+                            self.numTries += 1
+                            if (1 == dateNum){
+                                numCorrect += 1
+                                (self.date,self.dateNum) = dateGen()
+                            }
+                            self.accuracy = Double(numCorrect)/Double(numTries)
                         }){
                             Text(" 1 ")
                                 .fontWeight(.bold)
@@ -166,7 +180,12 @@ struct CalendarImage: View {
                         
 
                         Button(action: {
-                            self.responseNum = 2
+                            self.numTries += 1
+                            if (2 == dateNum){
+                                numCorrect += 1
+                                (self.date,self.dateNum) = dateGen()
+                            }
+                            self.accuracy = Double(numCorrect)/Double(numTries)
                         }){
                             Text(" 2 ")
                                 .fontWeight(.bold)
@@ -182,7 +201,12 @@ struct CalendarImage: View {
                     .padding(.horizontal)
                     HStack{
                         Button(action: {
-                            self.responseNum = 3
+                            self.numTries += 1
+                            if (3 == dateNum){
+                                numCorrect += 1
+                                (self.date,self.dateNum) = dateGen()
+                            }
+                            self.accuracy = Double(numCorrect)/Double(numTries)
                         }){
                             Text(" 3 ")
                                 .fontWeight(.bold)
@@ -194,7 +218,12 @@ struct CalendarImage: View {
                         .padding(.all, 13.0)
                         .foregroundColor(.black)
                         Button(action: {
-                            self.responseNum = 4
+                            self.numTries += 1
+                            if (4 == dateNum){
+                                numCorrect += 1
+                                (self.date,self.dateNum) = dateGen()
+                            }
+                            self.accuracy = Double(numCorrect)/Double(numTries)
                         }){
                             Text(" 4 ")
                                 .fontWeight(.bold)
@@ -207,7 +236,12 @@ struct CalendarImage: View {
                         .foregroundColor(.black)
 
                         Button(action: {
-                            self.responseNum = 5
+                            self.numTries += 1
+                            if (5 == dateNum){
+                                numCorrect += 1
+                                (self.date,self.dateNum) = dateGen()
+                            }
+                            self.accuracy = Double(numCorrect)/Double(numTries)
                         }){
                             Text(" 5 ")
                                 .fontWeight(.bold)
@@ -222,7 +256,12 @@ struct CalendarImage: View {
                     .padding(.horizontal)
                     HStack{
                         Button(action: {
-                            self.responseNum = 6
+                            self.numTries += 1
+                            if (6 == dateNum){
+                                numCorrect += 1
+                                (self.date,self.dateNum) = dateGen()
+                            }
+                            self.accuracy = Double(numCorrect)/Double(numTries)
                         }){
                             Text(" 6 ")
                                 .fontWeight(.bold)
@@ -242,9 +281,27 @@ struct CalendarImage: View {
                         .fill(Color("bkgdColorLight")))
                 .overlay(RoundedRectangle(cornerRadius: 25)
                             .stroke(Color.black, lineWidth: 2))
-                        
-                Text("Response (Debug): " + String(responseNum))
-                Text("Real Date (Debug): " + String(dateNum))
+                VStack{
+                    Text("DEBUG: " )
+                    Text("Accuracy: " + String(format: " %5.2f%", accuracy*100))
+                    
+                    Text("Real Date: " + String(dateNum))
+                    
+                    Text("Number of Tries: " + String(numTries))
+                    
+                    Text("Number Correct: " + String(numCorrect))
+                }
+                
+                
+            }
+            
+            .overlay(
+                ProgressView(value: accuracy)
+                    .padding()
+                .progressViewStyle(LinearProgressViewStyle(tint: Color.green))
+                    .position(CGPoint.init(x:200.0,y:845.0))
+                )
+            
             }
         }
             
