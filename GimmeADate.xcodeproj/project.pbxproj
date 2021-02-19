@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A12A29B25DF87140084CFFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A12A29A25DF87140084CFFE /* Main.storyboard */; };
 		3A5D7A5925DA383B0047258F /* SuccessGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5D7A5825DA383B0047258F /* SuccessGraph.swift */; };
 		3AF6C5F725D4F6CC00D3DFB1 /* GimmeADateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF6C5F625D4F6CC00D3DFB1 /* GimmeADateApp.swift */; };
 		3AF6C5F925D4F6CC00D3DFB1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF6C5F825D4F6CC00D3DFB1 /* ContentView.swift */; };
@@ -14,7 +15,6 @@
 		3AF6C5FE25D4F6CD00D3DFB1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AF6C5FD25D4F6CD00D3DFB1 /* Preview Assets.xcassets */; };
 		3AF6C60925D4F6CD00D3DFB1 /* GimmeADateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF6C60825D4F6CD00D3DFB1 /* GimmeADateTests.swift */; };
 		3AF6C61425D4F6CD00D3DFB1 /* GimmeADateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF6C61325D4F6CD00D3DFB1 /* GimmeADateUITests.swift */; };
-		3AF6C62225D4FD4000D3DFB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AF6C62125D4FD4000D3DFB1 /* Main.storyboard */; };
 		3AF6C62625D506D500D3DFB1 /* CalendarImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF6C62525D506D500D3DFB1 /* CalendarImage.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3A12A29A25DF87140084CFFE /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3A5D7A5825DA383B0047258F /* SuccessGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessGraph.swift; sourceTree = "<group>"; };
 		3AF6C5F325D4F6CC00D3DFB1 /* GimmeADate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GimmeADate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AF6C5F625D4F6CC00D3DFB1 /* GimmeADateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GimmeADateApp.swift; sourceTree = "<group>"; };
@@ -49,7 +50,6 @@
 		3AF6C60F25D4F6CD00D3DFB1 /* GimmeADateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GimmeADateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AF6C61325D4F6CD00D3DFB1 /* GimmeADateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GimmeADateUITests.swift; sourceTree = "<group>"; };
 		3AF6C61525D4F6CD00D3DFB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3AF6C62125D4FD4000D3DFB1 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3AF6C62525D506D500D3DFB1 /* CalendarImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,11 +103,11 @@
 			children = (
 				3AF6C5F625D4F6CC00D3DFB1 /* GimmeADateApp.swift */,
 				3AF6C5F825D4F6CC00D3DFB1 /* ContentView.swift */,
-				3AF6C62125D4FD4000D3DFB1 /* Main.storyboard */,
 				3AF6C62525D506D500D3DFB1 /* CalendarImage.swift */,
 				3A5D7A5825DA383B0047258F /* SuccessGraph.swift */,
 				3AF6C5FA25D4F6CD00D3DFB1 /* Assets.xcassets */,
 				3AF6C5FF25D4F6CD00D3DFB1 /* Info.plist */,
+				3A12A29A25DF87140084CFFE /* Main.storyboard */,
 				3AF6C5FC25D4F6CD00D3DFB1 /* Preview Content */,
 			);
 			path = GimmeADate;
@@ -242,9 +242,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AF6C62225D4FD4000D3DFB1 /* Main.storyboard in Resources */,
 				3AF6C5FE25D4F6CD00D3DFB1 /* Preview Assets.xcassets in Resources */,
 				3AF6C5FB25D4F6CD00D3DFB1 /* Assets.xcassets in Resources */,
+				3A12A29B25DF87140084CFFE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

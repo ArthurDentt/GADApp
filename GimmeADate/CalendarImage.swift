@@ -88,7 +88,6 @@ func dateGen() -> (String,Int) {
 
 let initialdate = dateGen()
 
-
 struct CalendarImage: View {
     @State var date = initialdate.0
     @State var calcolor = Color("calColor")
@@ -281,16 +280,17 @@ struct CalendarImage: View {
                         .fill(Color("bkgdColorLight")))
                 .overlay(RoundedRectangle(cornerRadius: 25)
                             .stroke(Color.black, lineWidth: 2))
-                VStack{
-                    Text("DEBUG: " )
-                    Text("Accuracy: " + String(format: " %5.2f%", accuracy*100))
+              //MARK DEBUG
+//                VStack{
+//                    Text("DEBUG: " )
+//                    Text("Accuracy: " + String(format: " %5.2f%", accuracy*100))
                     
-                    Text("Real Date: " + String(dateNum))
+//                    Text("Real Date: " + String(dateNum))
                     
-                    Text("Number of Tries: " + String(numTries))
+//                    Text("Number of Tries: " + String(numTries))
                     
-                    Text("Number Correct: " + String(numCorrect))
-                }
+//                    Text("Number Correct: " + String(numCorrect))
+//                }
                 
                 
             }
